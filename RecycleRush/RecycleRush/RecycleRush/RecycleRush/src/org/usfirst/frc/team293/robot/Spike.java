@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team293.robot;
-
+import org.usfirst.frc.team293.robot.Ports;
+import org.usfirst.frc.team293.robot.Init;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 /**
@@ -16,7 +17,7 @@ public class Spike extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-
+    	Init.setUp();
     }
 
     /**
