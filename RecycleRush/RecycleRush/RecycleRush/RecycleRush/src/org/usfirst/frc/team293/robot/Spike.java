@@ -45,6 +45,7 @@ public class Spike extends IterativeRobot {
         OI.controlDrive();
         OI.controlCanLifter();
         OI.controlToteLifter();
+        PDP.monitor();
     }
     
     /**
