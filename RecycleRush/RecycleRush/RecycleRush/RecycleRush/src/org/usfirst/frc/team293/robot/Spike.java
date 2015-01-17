@@ -1,8 +1,11 @@
 
 package org.usfirst.frc.team293.robot;
-import org.usfirst.frc.team293.robot.Ports;
-import org.usfirst.frc.team293.robot.Init;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import org.usfirst.frc.team293.robot.OI;
+import org.usfirst.frc.team293.robot.Init;
+//import edu.wpi.first.wpilibj.smartdashboard.*;
+//import edu.wpi.first.wpilibj.DriverStation;
+//import autonomous.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -23,7 +26,14 @@ public class Spike extends IterativeRobot {
     /**
      * This function is called periodically during autonomous
      */
+/*    public void autonomousInit(){
+    	selectedAuto = (Auto) Init.autonomousChooser.getSelected();
+        selectedAuto.init();
+        Auto.hasRunAuto=false;
+    }
+*/    
     public void autonomousPeriodic() {
+  //  	Auto.run();
 
     }
 
@@ -31,14 +41,20 @@ public class Spike extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        
+        OI.controlSlurper();
+        OI.controlDrive();
+        OI.controlCanLifter();
+        OI.controlToteLifter();
     }
     
     /**
      * This function is called periodically during test mode
      */
     public void testPeriodic() {
-    
+    	OI.controlSlurper();
+        OI.controlDrive();
+        OI.controlCanLifter();
+        OI.controlToteLifter();
     }
     
 }
