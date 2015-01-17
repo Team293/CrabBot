@@ -1,10 +1,10 @@
 package autonomous;
-import edu.wpi.first.wpilibj.Gyro;
+/*import edu.wpi.first.wpilibj.Gyro;
 import org.usfirst.frc.team293.robot.Ports;
 import edu.wpi.first.wpilibj.Timer;
-
+*/
 public class Auto {
-	static final Gyro gyro = new Gyro(Ports.gyro);
+	/*static final Gyro gyro = new Gyro(Ports.gyro);
     public static boolean hasRunAuto = false;
     static final double kStraight = 0.082, kAlign = 0.071;
     double alignTime = 0.5,
@@ -23,4 +23,5 @@ public class Auto {
             turnRight = (-turnLeft);
     double commandStartTime = 0;
     public static Timer autoTimer = new Timer();
+    */
 }
