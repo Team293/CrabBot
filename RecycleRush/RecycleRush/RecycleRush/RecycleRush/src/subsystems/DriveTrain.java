@@ -29,6 +29,10 @@ public class DriveTrain {
 		return distance;
 	}
 	
+	public static double[] getMotorSpeeds() {
+		return new double[] {leftMotor.get(), rightMotor.get()};
+	}
+	
 /*	public static double getAngle() {
 		double leftDistance = convertToDistance(leftEncoder.getRaw());
 		double rightDistance = convertToDistance(rightEncoder.getRaw());

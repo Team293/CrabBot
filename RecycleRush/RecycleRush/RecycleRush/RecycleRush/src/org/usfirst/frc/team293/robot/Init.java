@@ -16,15 +16,7 @@ public class Init {
         String[] colorNames;
         Auto[] autonomi;
         Auto selectedAuto;
-        autonomiNames = new String[]{"cross line",
-            "cold one ball",
-            "cold two ball",
-            "hot one ball",
-            "hot two ball",
-            "US cold one ball",
-            "US cold two ball",
-            "US hot one ball",
-            "US hot two ball"};
+        autonomiNames = new String[]{};
 
         colorNames = new String[]{"BLUE",
             "RED"};
