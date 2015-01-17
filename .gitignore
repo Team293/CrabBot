@@ -42,7 +42,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-*RecycleRush/RecycleRush/.metadata/*
-*RecycleRush/RecycleRush/RecycleRush/build.xml
-*RecycleRush/.metadata/*
-*RecycleRush/RecycleRush/RecycleRush/*
+#*RecycleRush/RecycleRush/.metadata/*
+#*RecycleRush/RecycleRush/RecycleRush/build.xml
+#*RecycleRush/.metadata/*
+#*RecycleRush/RecycleRush/RecycleRush/*
