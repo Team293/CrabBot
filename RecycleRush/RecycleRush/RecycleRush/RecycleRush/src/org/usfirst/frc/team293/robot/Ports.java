@@ -19,9 +19,9 @@ public class Ports {
 			
 			//motors
 			leftDrive = 5,
-			rightDrive = 4,
-			leftSlurperHand = 3,
-			rightSlurperHand = 2,
+			leftDrive2 = 3,
+			rightDrive2 = 2,
+			rightDrive= 4,
 			belt = 6,
 			
 			//pneumatics
