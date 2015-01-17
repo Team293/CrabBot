@@ -16,11 +16,6 @@ public class OI {
     public static void controlToteLifter() {
     	ToteLifter.move(rightJoystick.getRawButton(Ports.joyTrigger));
     }
-    
-    public static void controlSlurper() {
-    	Slurper.slurp(gamepad.getRawAxis(Ports.leftStick)/2.5, gamepad.getRawAxis(Ports.rightStick)/2.5);
-    	
-    }
 
     public static void controlCanLifter() {
     	double speed = 0;

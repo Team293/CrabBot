@@ -34,7 +34,7 @@ public class Robot extends IterativeRobot {
     }
 */    
     public void autonomousPeriodic() {
-  //  	Auto.run();
+  //  	selectedAuto.run();
 
     }
 
@@ -42,7 +42,6 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during operator control
      */
     public void teleopPeriodic() {
-        OI.controlSlurper();
         OI.controlDrive();
         OI.controlCanLifter();
         OI.controlToteLifter();
@@ -53,7 +52,6 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during test mode
      */
     public void testPeriodic() {
-    	OI.controlSlurper();
         OI.controlDrive();
         OI.controlCanLifter();
         OI.controlToteLifter();
