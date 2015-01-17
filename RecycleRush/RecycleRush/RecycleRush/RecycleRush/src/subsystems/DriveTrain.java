@@ -28,26 +28,4 @@ public class DriveTrain {
 		
 		return distance;
 	}
-	
-/*	public static double getAngle() {
-		double leftDistance = convertToDistance(leftEncoder.getRaw());
-		double rightDistance = convertToDistance(rightEncoder.getRaw());
-		double deltaDistance = rightDistance - leftDistance;
-		double radians = deltaDistance/width;
-		double degrees = radians*180/Math.PI;
-		
-		return degrees;
-	}
-	
-	public static void driveStraight(double speed) {
-		double leftSpeed = speed + getAngle()/90;
-		double rightSpeed = speed - getAngle()/90;
-		tankDrive(leftSpeed, rightSpeed);
-	}
-	
-	public static void encodersReset() {
-		leftEncoder.reset();
-		rightEncoder.reset();
-	}*/
-
 }

@@ -3,9 +3,7 @@ package org.usfirst.frc.team293.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import org.usfirst.frc.team293.robot.OI;
 import org.usfirst.frc.team293.robot.PDP;
-//import edu.wpi.first.wpilibj.smartdashboard.*;
-//import edu.wpi.first.wpilibj.DriverStation;
-//import autonomous.*;
+
 
 /**
  * The VM is configured to automatically run this class, and to call the

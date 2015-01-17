@@ -28,11 +28,6 @@ public class Ports {
 			solenoid1 = 0,
 			solenoid2 = 1,
 	
-/*			//digital input
-			leftCylinderLimit = 6,
-			rightCylinderLimit = 7,
-			toteDetectorLimit = 8; */
-	
 			//sensors
 			gyro=1,
 			

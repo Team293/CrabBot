@@ -1,7 +1,7 @@
 package subsystems;
 
 public class Logic {
-	public static boolean
+	private static boolean
 		lastButton = false,
 		buttonState=true,
 		currentState=false;
