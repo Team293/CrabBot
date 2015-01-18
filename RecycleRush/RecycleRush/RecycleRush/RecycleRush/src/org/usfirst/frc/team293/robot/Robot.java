@@ -1,12 +1,15 @@
 
 package org.usfirst.frc.team293.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
+
 import org.usfirst.frc.team293.robot.OI;
 import org.usfirst.frc.team293.robot.Init;
 import org.usfirst.frc.team293.robot.PDP;
 //import edu.wpi.first.wpilibj.smartdashboard.*;
 //import edu.wpi.first.wpilibj.DriverStation;
 //import autonomous.*;
+
+import autonomous.Auto;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -16,6 +19,7 @@ import org.usfirst.frc.team293.robot.PDP;
  * directory.
  */
 public class Robot extends IterativeRobot {
+	Auto selectedAuto;
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
@@ -27,15 +31,14 @@ public class Robot extends IterativeRobot {
     /**
      * This function is called periodically during autonomous
      */
-/*    public void autonomousInit(){
-    	selectedAuto = (Auto) Init.autonomousChooser.getSelected();
-        selectedAuto.init();
+    public void autonomousInit(){
+    	selectedAuto = (Auto) Init.setUp();
         Auto.hasRunAuto=false;
     }
-*/    
+   
     public void autonomousPeriodic() {
   //  	selectedAuto.run();
-    	
+    	OI.controlAuto(selectedAuto);
     }
 
     /**

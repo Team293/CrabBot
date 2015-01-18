@@ -8,18 +8,17 @@ import autonomous.*;
 public class Init {
 	
 
-	public static final void setUp(){
+	public static final Object setUp(){
 		DriverStation LCD = DriverStation.getInstance();
         SendableChooser autonomousChooser = new SendableChooser();
         SendableChooser colorChooser = new SendableChooser();
         String[] autonomiNames;
-        String[] colorNames;
+        //String[] colorNames;
         Auto[] autonomi;
         Auto selectedAuto;
-        autonomiNames = new String[]{};
+        autonomiNames = new String[]{"SimpleAuto"};
 
-        colorNames = new String[]{"BLUE",
-            "RED"};
+        //colorNames = new String[]{"BLUE", "RED"};
 
         autonomi = new Auto[]{};
         for (int i = 0; i < autonomiNames.length; ++i) {
@@ -27,9 +26,11 @@ public class Init {
         }
         SmartDashboard.putData("Which Autonomous?", autonomousChooser);
 
-        for (int i = 0; i < colorNames.length; ++i) {
+        /*for (int i = 0; i < colorNames.length; ++i) {
             colorChooser.addObject(colorNames[i], colorNames[i]);
         }
-        SmartDashboard.putData("Which Allaince Color?", colorChooser);
+        SmartDashboard.putData("Which Allaince Color?", colorChooser);*/
+        
+        return autonomousChooser.getSelected();
 	}
 }

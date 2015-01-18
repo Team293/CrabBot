@@ -1,5 +1,6 @@
 package org.usfirst.frc.team293.robot;
 
+import autonomous.Auto;
 import edu.wpi.first.wpilibj.Joystick;
 import subsystems.*;
 
@@ -9,7 +10,9 @@ public class OI {
 			rightJoystick = new Joystick(Ports.rightJoystick),
 			gamepad = new Joystick(Ports.gamepad);
 	
-	
+	public static void controlAuto (Auto auto) {
+		auto.driveIntoAutoZone();
+	}
 	
 	public static void controlDrive() {
         DriveTrain.tankDrive(leftJoystick.getY(), rightJoystick.getY());
