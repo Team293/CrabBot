@@ -13,25 +13,25 @@ public class DriveTrain {
     private static final Talon rightMotor = new Talon(Ports.rightDrive);
     private static final Talon leftMotor2 = new Talon(Ports.leftDrive2);
     private static final Talon rightMotor2 = new Talon(Ports.rightDrive2);
-    private static final RobotDrive drive = new RobotDrive(leftMotor,
-            rightMotor);  
-    private static final RobotDrive drive2 = new RobotDrive(leftMotor2,
-            rightMotor2);  
- 
+    private static final RobotDrive drive = new RobotDrive(leftMotor, leftMotor2, rightMotor, rightMotor2);
+
 	public static void tankDrive(double leftSpeed, double rightSpeed) {
 		drive.tankDrive(leftSpeed, rightSpeed);
-		drive2.tankDrive(leftSpeed, rightSpeed);
+	}
+	
+	public static double adjustSpeed(double value) {
+		double speed = Math.sin(value*Math.PI/2);
+		return speed;
 	}
 	
 	public static void adjustedDrive(double leftValue, double rightValue) {
-		double leftSpeed = Math.sin(leftValue*Math.PI/2);
-		double rightSpeed = Math.sin(rightValue*Math.PI/2);
+		double leftSpeed = adjustSpeed(leftValue);
+		double rightSpeed = adjustSpeed(rightValue);
 		tankDrive(leftSpeed, rightSpeed);
 	}
 	
 	public static void arcadeDrive(double move, double rotate) {
 		drive.arcadeDrive(move, rotate);
-		drive2.arcadeDrive(move, rotate);
 	}
 	
 	public static double convertToDistance(double count) {
