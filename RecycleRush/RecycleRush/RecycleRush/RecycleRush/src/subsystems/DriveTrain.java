@@ -14,7 +14,7 @@ public class DriveTrain {
     private static final Talon leftMotor2 = new Talon(Ports.leftDrive2);
     private static final Talon rightMotor2 = new Talon(Ports.rightDrive2);
     private static final RobotDrive drive = new RobotDrive(leftMotor,
-            rightMotor);  
+            rightMotor);
     private static final RobotDrive drive2 = new RobotDrive(leftMotor2,
             rightMotor2);  
  
