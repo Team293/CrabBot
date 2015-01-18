@@ -6,21 +6,17 @@ import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.RobotDrive;
 
 public class DriveTrain {
-	private static final double diameter = 10;
+//	private static final double diameter = 10;
 //	private static final double width = 40;
 	
     private static final Talon leftMotor = new Talon(Ports.leftDrive);
     private static final Talon rightMotor = new Talon(Ports.rightDrive);
     private static final Talon leftMotor2 = new Talon(Ports.leftDrive2);
     private static final Talon rightMotor2 = new Talon(Ports.rightDrive2);
-    private static final RobotDrive drive = new RobotDrive(leftMotor,
-            rightMotor);  
-    private static final RobotDrive drive2 = new RobotDrive(leftMotor2,
-            rightMotor2);  
+    private static final RobotDrive drive = new RobotDrive(leftMotor, leftMotor2, rightMotor, rightMotor2);   
  
 	public static void tankDrive(double leftSpeed, double rightSpeed) {
 		drive.tankDrive(leftSpeed, rightSpeed);
-		drive2.tankDrive(leftSpeed, rightSpeed);
 	}
 	
 	public static void adjustedDrive(double leftValue, double rightValue) {
@@ -31,13 +27,12 @@ public class DriveTrain {
 	
 	public static void arcadeDrive(double move, double rotate) {
 		drive.arcadeDrive(move, rotate);
-		drive2.arcadeDrive(move, rotate);
 	}
 	
-	public static double convertToDistance(double count) {
+/*	public static double convertToDistance(double count) {
 		double rotations  = count/256;
 		double distance = Math.PI*diameter*rotations;
 		
 		return distance;
-	}
+	} */
 }
