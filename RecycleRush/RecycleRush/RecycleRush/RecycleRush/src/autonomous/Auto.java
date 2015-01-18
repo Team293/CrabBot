@@ -4,7 +4,10 @@ import edu.wpi.first.wpilibj.Gyro;
 import org.usfirst.frc.team293.robot.Ports;
 
 import subsystems.DriveTrain;
-import edu.wpi.first.wpilibj.Timer;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Auto {
@@ -12,6 +15,7 @@ public class Auto {
     public static boolean hasRunAuto = false;
     // TODO: change to final when actual value obtained
     static double kStraight = 0.0, kAlign = 0.071;
+    public static long drivingTime = 5000;
 /*    double alignTime = 0.5,
             stopTime1 = 2.2,
             stopTime2 = 2.4,
@@ -29,6 +33,19 @@ public class Auto {
             
     double commandStartTime = 0;
     public static Timer autoTimer = new Timer();*/
+    
+    public static void driveIntoAutoZone() {
+    	driveStraight();
+    	Timer timer = new Timer();
+    	timer.schedule(new TimerTask() {
+
+			@Override
+			public void run() {
+				DriveTrain.stopMotors();
+			}
+    		
+    	}, drivingTime);
+    }
     
     public static void driveStraight() {
     	SmartDashboard.putNumber("kStraight", kStraight);

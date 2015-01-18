@@ -18,6 +18,10 @@ public class DriveTrain {
 		drive.tankDrive(leftSpeed, rightSpeed);
 	}
 	
+	public static void stopMotors() {
+		drive.tankDrive(0, 0);
+	}
+	
 	public static void arcadeDrive(double move, double rotate) {
 		drive.arcadeDrive(move, rotate);
 	}

@@ -8,6 +8,9 @@ public class OI {
 			leftJoystick = new Joystick(Ports.leftJoystick),
 			rightJoystick = new Joystick(Ports.rightJoystick),
 			gamepad = new Joystick(Ports.gamepad);
+	
+	
+	
 	public static void controlDrive() {
         DriveTrain.tankDrive(leftJoystick.getY(), rightJoystick.getY());
     }
