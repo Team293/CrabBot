@@ -34,6 +34,16 @@ public class DriveTrain {
 		tankDrive(leftSpeed, rightSpeed);
 	}
 	
+	private static double lastLeftValue = 0;
+	private static double lastRightValue = 0;
+	private static final double p = 0.4;
+	
+	public static void lerpDrive(double leftValue, double rightValue) {
+		lastLeftValue = leftValue*p + lastLeftValue*(1-p);
+		lastRightValue = rightValue*p + lastRightValue*(1-p);
+		tankDrive(lastLeftValue, lastRightValue);
+	}
+	
 	public static void arcadeDrive(double move, double rotate) {
 		drive.arcadeDrive(move, rotate);
 	}

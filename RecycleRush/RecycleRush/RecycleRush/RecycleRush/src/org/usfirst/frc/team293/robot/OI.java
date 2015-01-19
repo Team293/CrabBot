@@ -8,6 +8,8 @@ public class OI {
 			leftJoystick = new Joystick(Ports.leftJoystick),
 			rightJoystick = new Joystick(Ports.rightJoystick),
 			gamepad = new Joystick(Ports.gamepad);
+	private static final SpikeButton driveModeButton = new SpikeButton();
+	
 	public static void controlDrive() {
         DriveTrain.adjustedDrive(leftJoystick.getY(), rightJoystick.getY());
     }
