@@ -15,7 +15,7 @@ public class Auto {
     public static boolean hasRunAuto = false;
     // TODO: change to final when actual value obtained
     static double kStraight = 0.0, kAlign = 0.071;
-    public long drivingTime = 5000;
+    public long drivingTime = 1000;
 /*    double alignTime = 0.5,
             stopTime1 = 2.2,
             stopTime2 = 2.4,

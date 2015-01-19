@@ -16,7 +16,7 @@ public class Init {
         //String[] colorNames;
         Auto[] autonomi;
         Auto selectedAuto;
-        autonomiNames = new String[]{"SimpleAuto"};
+        autonomiNames = new String[]{"Auto"};
 
         //colorNames = new String[]{"BLUE", "RED"};
 
