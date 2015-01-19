@@ -1,8 +1,7 @@
 
 package org.usfirst.frc.team293.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
-import org.usfirst.frc.team293.robot.OI;
-import org.usfirst.frc.team293.robot.PDP;
+//import org.usfirst.frc.team293.robot.OI;
 
 
 /**
@@ -33,7 +32,7 @@ public class Robot extends IterativeRobot {
         OI.controlDrive();
         OI.controlCanLifter();
         OI.controlToteLifter();
-        PDP.monitor();
+        //PDP.monitor();
     }
     
     /**
@@ -43,7 +42,7 @@ public class Robot extends IterativeRobot {
         OI.controlDrive();
         OI.controlCanLifter();
         OI.controlToteLifter();
-        PDP.monitor();
+        //PDP.monitor();
     }
     
 }
