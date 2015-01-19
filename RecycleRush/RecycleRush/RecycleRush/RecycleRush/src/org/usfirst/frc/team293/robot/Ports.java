@@ -20,8 +20,8 @@ public class Ports {
 			//motors
 			leftDrive1 = 5,
 			leftDrive2 = 3,
-			rightDrive1 = 2,
-			rightDrive2 = 4,
+			rightDrive2 = 2,
+			rightDrive1 = 4,
 			belt = 6,
 			
 			//pneumatics
