@@ -34,6 +34,7 @@ public class Ports {
 			toteDetectorLimit = 8; */
 	
 			//sensors
+			toteSensor=0,
 			gyro=1,
 			
 			

@@ -7,6 +7,7 @@ import subsystems.DriveTrain;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import edu.wpi.first.wpilibj.DigitalInput;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -16,6 +17,7 @@ public class Auto {
     // TODO: change to final when actual value obtained
     static double kStraight = 0.0, kAlign = 0.071;
     public long drivingTime = 1000;
+    public static final DigitalInput toteSensor = new DigitalInput(Ports.toteSensor);
 /*    double alignTime = 0.5,
             stopTime1 = 2.2,
             stopTime2 = 2.4,
@@ -46,6 +48,7 @@ public class Auto {
 			}
     		
     	}, drivingTime);
+    	SmartDashboard.putBoolean("ToteSensor", toteSensor.get());
     }
     
     public static void driveStraight() {

@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 
 import org.usfirst.frc.team293.robot.OI;
 import org.usfirst.frc.team293.robot.Init;
-import org.usfirst.frc.team293.robot.PDP;
+import org.usfirst.frc.team293.robot.Sensor;
 //import edu.wpi.first.wpilibj.smartdashboard.*;
 //import edu.wpi.first.wpilibj.DriverStation;
 //import autonomous.*;
@@ -48,7 +48,7 @@ public class Robot extends IterativeRobot {
         OI.controlDrive();
         OI.controlCanLifter();
         OI.controlToteLifter();
-        PDP.monitor();
+        Sensor.monitor();
     }
     
     /**
@@ -58,7 +58,7 @@ public class Robot extends IterativeRobot {
         OI.controlDrive();
         OI.controlCanLifter();
         OI.controlToteLifter();
-        PDP.monitor();
+        Sensor.monitor();
     }
     
 }
