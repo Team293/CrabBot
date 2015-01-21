@@ -42,6 +42,7 @@ public class Robot extends IterativeRobot {
         OI.controlDrive();
         OI.controlCanLifter();
         OI.controlToteLifter();
+        OI.controlDoors();
         //PDP.monitor();
     }
     

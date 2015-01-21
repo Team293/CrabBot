@@ -15,7 +15,10 @@ public class Ports {
 			//gamepad
 			rightBumper = 6,
 			leftBumper = 5,
-			buttonB = 2,
+			A = 1,
+			B = 2,
+			X = 3,
+			Y = 4,
 			
 			//motors
 			leftDrive1 = 5,
@@ -27,6 +30,8 @@ public class Ports {
 			//pneumatics
 			solenoid1 = 0,
 			solenoid2 = 1,
+			door1 = 3,
+			door2 = 4,
 	
 			//sensors
 			gyro=1,
