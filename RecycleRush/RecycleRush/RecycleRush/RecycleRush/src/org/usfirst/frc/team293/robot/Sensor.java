@@ -6,7 +6,10 @@ import edu.wpi.first.wpilibj.DigitalInput;
 
 public class Sensor {
 	private static final PowerDistributionPanel pdp=new PowerDistributionPanel();
-	private static final DigitalInput toteSensor = new DigitalInput(Ports.toteSensor);
+	private static final DigitalInput 
+			toteSensor1 = new DigitalInput(Ports.toteSensor1),
+			toteSensor2 = new DigitalInput(Ports.toteSensor2);
+	
 	
 	public static void monitor(){
 		SmartDashboard.putNumber("current0", pdp.getCurrent(0));
@@ -14,6 +17,7 @@ public class Sensor {
 		SmartDashboard.putNumber("current9", pdp.getCurrent(9));
 		SmartDashboard.putNumber("current10", pdp.getCurrent(10));
 		SmartDashboard.putNumber("current11", pdp.getCurrent(11));
-		SmartDashboard.putBoolean("toteSensor", toteSensor.get());
+		SmartDashboard.putBoolean("toteSensor1", toteSensor1.get());
+		SmartDashboard.putBoolean("toteSensor2", toteSensor2.get());
 	}
 }

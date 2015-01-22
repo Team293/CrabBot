@@ -17,7 +17,8 @@ public class Auto {
     // TODO: change to final when actual value obtained
     static double kStraight = 0.0, kAlign = 0.071;
     public long drivingTime = 1000;
-    public static final DigitalInput toteSensor = new DigitalInput(Ports.toteSensor);
+    public static final DigitalInput toteSensor1 = new DigitalInput(Ports.toteSensor1);
+    public static final DigitalInput toteSensor2 = new DigitalInput(Ports.toteSensor2);
 /*    double alignTime = 0.5,
             stopTime1 = 2.2,
             stopTime2 = 2.4,
@@ -48,7 +49,6 @@ public class Auto {
 			}
     		
     	}, drivingTime);
-    	SmartDashboard.putBoolean("ToteSensor", toteSensor.get());
     }
     
     public static void driveStraight() {
@@ -73,5 +73,7 @@ public class Auto {
         DriveTrain.tankDrive(-leftMotorOutput, -rightMotorOutput);
         
         kStraight = SmartDashboard.getNumber("kStraight", kStraight);
+    }
+    public static void run() {
     }
 }

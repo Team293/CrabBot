@@ -25,7 +25,7 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
- //   	Init.setUp();
+    	Init.setUp();
     }
 
     /**
@@ -37,7 +37,7 @@ public class Robot extends IterativeRobot {
     }
    
     public void autonomousPeriodic() {
-  //  	selectedAuto.run();
+    	selectedAuto.run();
     	OI.controlAuto(selectedAuto);
     }
 
