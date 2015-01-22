@@ -30,8 +30,8 @@ public class Ports {
 			//pneumatics
 			solenoid1 = 0,
 			solenoid2 = 1,
-			door1 = 3,
-			door2 = 4,
+			door1 = 2,
+			door2 = 3,
 	
 			//sensors
 			gyro=1,

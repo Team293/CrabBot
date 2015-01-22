@@ -3,7 +3,7 @@ package org.usfirst.frc.team293.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import subsystems.*;
 
-import org.usfirst.frc.team293.Library.SpikeButton;
+import org.usfirst.frc.team293.SpikeLibrary.SpikeButton;
 
 public class OI {
 	public static final Joystick
