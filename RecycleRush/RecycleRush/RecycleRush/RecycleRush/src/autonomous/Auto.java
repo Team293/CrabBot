@@ -74,6 +74,5 @@ public class Auto {
         
         kStraight = SmartDashboard.getNumber("kStraight", kStraight);
     }
-    public static void run() {
-    }
+
 }

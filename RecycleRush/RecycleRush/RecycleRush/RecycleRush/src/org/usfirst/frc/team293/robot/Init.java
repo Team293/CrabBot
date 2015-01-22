@@ -1,4 +1,4 @@
-package org.usfirst.frc.team293.robot;
+/*package org.usfirst.frc.team293.robot;
 
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -23,3 +23,4 @@ public class Init {
         return autonomousChooser.getSelected();
 	}
 }
+*/

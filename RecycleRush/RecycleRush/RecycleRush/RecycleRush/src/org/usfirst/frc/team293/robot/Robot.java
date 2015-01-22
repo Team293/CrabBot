@@ -3,7 +3,7 @@ package org.usfirst.frc.team293.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 import org.usfirst.frc.team293.robot.OI;
-import org.usfirst.frc.team293.robot.Init;
+//import org.usfirst.frc.team293.robot.Init;
 import org.usfirst.frc.team293.robot.Sensor;
 //import edu.wpi.first.wpilibj.smartdashboard.*;
 //import edu.wpi.first.wpilibj.DriverStation;
@@ -25,7 +25,7 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-    	Init.setUp();
+    	//Init.setUp();
     }
 
     /**
