@@ -19,7 +19,7 @@ import autonomous.Auto;
  * directory.
  */
 public class Robot extends IterativeRobot {
-	Auto selectedAuto;
+	//Auto selectedAuto;
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
@@ -32,13 +32,13 @@ public class Robot extends IterativeRobot {
      * This function is called periodically during autonomous
      */
     public void autonomousInit(){
-    	selectedAuto = (Auto) Init.setUp();
+    	//selectedAuto = (Auto) Init.setUp();
         Auto.hasRunAuto=false;
     }
    
     public void autonomousPeriodic() {
-    	selectedAuto.run();
-    	OI.controlAuto(selectedAuto);
+    	//selectedAuto.run();
+    	//OI.controlAuto(selectedAuto);
     }
 
     /**
