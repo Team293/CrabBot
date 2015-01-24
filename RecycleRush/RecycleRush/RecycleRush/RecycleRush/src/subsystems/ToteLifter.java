@@ -23,12 +23,6 @@ public class ToteLifter {
 			cylinders.set(DoubleSolenoid.Value.kReverse);
 		}
 	}
-	public static void down(){
-		cylinders.set(DoubleSolenoid.Value.kReverse);
-	}
-	public static void up(){
-		cylinders.set(DoubleSolenoid.Value.kForward);
-	}
 	
 /*	public static boolean isDown() {
 		if (leftLimit.get() && rightLimit.get()){

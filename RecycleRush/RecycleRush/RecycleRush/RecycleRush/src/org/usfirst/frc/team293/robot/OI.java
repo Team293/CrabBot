@@ -1,5 +1,6 @@
 package org.usfirst.frc.team293.robot;
 
+import autonomous.Auto;
 import edu.wpi.first.wpilibj.Joystick;
 import subsystems.*;
 

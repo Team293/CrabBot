@@ -1,12 +1,9 @@
 
 package org.usfirst.frc.team293.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team293.robot.OI;
 import org.usfirst.frc.team293.robot.Sensor;
-
 import autonomous.Auto;
 import autonomous.ChooserAuto;
 
@@ -24,29 +21,21 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
 	private static Auto auto;
-	private static final int autoTime = 15;
-	private static Timer timer = new Timer();
     public void robotInit() {
     	ChooserAuto.init();
     }
 
     /**
-     * This function is called periodically during autonomous\
+     * This function is called periodically during autonomous
      */
     public void autonomousInit(){
+    	
         Auto.hasRunAuto=false;
-        auto = ChooserAuto.autoChosen();
-        timer.start();
+        Auto auto = ChooserAuto.autoChosen();
     }
    
     public void autonomousPeriodic() {
     	auto.execute();
-    	SmartDashboard.putNumber("timerRobot",timer.get());
-    	while (timer.get()<autoTime){
-    		SmartDashboard.putNumber("timerRobot",timer.get());
-    	}
-    	auto.cancel();
-    	
 
     }
 
