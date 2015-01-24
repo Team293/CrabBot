@@ -5,6 +5,10 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import subsystems.DriveTrain;
 
 public class RobotSet extends Auto {
+	/**
+	 * Puts yellow bin without stacking the three bins in a stack.
+	 */
+
 	public RobotSet() {
 		super();
 	}

@@ -5,11 +5,12 @@ import edu.wpi.first.wpilibj.Talon;
  
 public class CanLifter {
 	private static final Talon belt = new Talon(Ports.belt);
+	public static final double position = 0;
 	
 	public static void move(double speed) {
 		belt.set(speed);
 	}
-	public static void autoUp(){}
-	public static void autoDown(){}
+	
+	
 
 }
