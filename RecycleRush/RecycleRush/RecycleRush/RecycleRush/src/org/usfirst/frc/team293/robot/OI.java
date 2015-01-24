@@ -10,7 +10,7 @@ public class OI {
 			leftJoystick = new Joystick(Ports.leftJoystick),
 			rightJoystick = new Joystick(Ports.rightJoystick),
 			gamepad = new Joystick(Ports.gamepad);
-	private static final SpikeButton toteButton = new SpikeButton(rightJoystick, Ports.joyTrigger);
+	private static final SpikeButton toteButton = new SpikeButton(leftJoystick, Ports.joyTrigger);
 	private static final SpikeButton doorButton = new SpikeButton(gamepad, Ports.B);
 	private static final SpikeButton canUpButton = new SpikeButton(gamepad, Ports.rightBumper);
 	private static final SpikeButton canDownButton = new SpikeButton(gamepad, Ports.leftBumper);

@@ -4,8 +4,8 @@ public class Ports {
 	public static final int 
 			
 			//joysticks
-			rightJoystick = 0,
-			leftJoystick = 1,
+			rightJoystick = 1,
+			leftJoystick = 0,
 			gamepad = 2,
 			leftStick = 1,
 			rightStick = 5,
