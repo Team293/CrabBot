@@ -1,32 +1,23 @@
 package autonomous;
-import edu.wpi.first.wpilibj.Gyro;
-
-import org.usfirst.frc.team293.robot.Ports;
-
-import subsystems.DriveTrain;
-
-import java.util.Timer;
-import java.util.TimerTask;
-import edu.wpi.first.wpilibj.DigitalInput;
-
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.command.Command;
+import subsystems.CanLifter;
+import subsystems.DriveTrain;
+import subsystems.ToteLifter;
 
 public  class Auto extends Command{
     public static boolean hasRunAuto = false;
     // TODO: change to final when actual value obtained
-    public long drivingTime = 1000;
+    public long zoneDriveTime = 1;
     
 	protected void initialize() {}
 	public void execute() {}
-	protected synchronized final void setTimeout(int timeout){
-		super();
-	}
 	protected boolean isFinished() {
 		return false;
 	}
 	protected void end() {
 		DriveTrain.stopMotors();
+		CanLifter.move(0);
+		ToteLifter.down();
 	}
 	protected void interrupted() {
 		end();

@@ -1,7 +1,6 @@
 package autonomous;
 
 import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 //See this for details
@@ -16,7 +15,6 @@ public class ChooserAuto {
 	public static Auto autoChosen(){//in auto initiation
 		autonomousCommand = (Auto) autoChooser.getSelected();
 		autonomousCommand.start();//starts up the chooser and reads in get selected.
-		autonomousCommand.setTimeout(15);
 		return autonomousCommand;
 	}
 	void Periodics()//run this in auto Periodic
