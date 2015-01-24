@@ -9,5 +9,7 @@ public class CanLifter {
 	public static void move(double speed) {
 		belt.set(speed);
 	}
+	public static void autoUp(){}
+	public static void autoDown(){}
 
 }

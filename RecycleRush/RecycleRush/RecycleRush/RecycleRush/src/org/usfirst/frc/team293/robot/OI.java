@@ -10,10 +10,6 @@ public class OI {
 			rightJoystick = new Joystick(Ports.rightJoystick),
 			gamepad = new Joystick(Ports.gamepad);
 	
-	public static void controlAuto (Auto auto) {
-		auto.driveIntoAutoZone();
-	}
-	
 	public static void controlDrive() {
         DriveTrain.tankDrive(leftJoystick.getY(), rightJoystick.getY());
     }

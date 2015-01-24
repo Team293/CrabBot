@@ -3,13 +3,9 @@ package org.usfirst.frc.team293.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
 
 import org.usfirst.frc.team293.robot.OI;
-//import org.usfirst.frc.team293.robot.Init;
 import org.usfirst.frc.team293.robot.Sensor;
-//import edu.wpi.first.wpilibj.smartdashboard.*;
-//import edu.wpi.first.wpilibj.DriverStation;
-//import autonomous.*;
-
 import autonomous.Auto;
+import autonomous.ChooserAuto;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -24,8 +20,9 @@ public class Robot extends IterativeRobot {
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
+	private static Auto auto;
     public void robotInit() {
-    
+    	ChooserAuto.init();
     }
 
     /**
@@ -34,9 +31,11 @@ public class Robot extends IterativeRobot {
     public void autonomousInit(){
     	
         Auto.hasRunAuto=false;
+        Auto auto = ChooserAuto.autoChosen();
     }
    
     public void autonomousPeriodic() {
+    	auto.execute();
 
     }
 

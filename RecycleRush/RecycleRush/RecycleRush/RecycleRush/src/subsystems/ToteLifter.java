@@ -2,6 +2,8 @@ package subsystems;
 
 import org.usfirst.frc.team293.robot.Ports;
 
+
+import edu.wpi.first.wpilibj.DigitalInput;
 //import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 
@@ -9,6 +11,8 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 public class ToteLifter {
 	public static final DoubleSolenoid cylinders = new DoubleSolenoid(Ports.solenoid1, Ports.solenoid2);
 	public static LogicButton b = new LogicButton();
+    public static final DigitalInput toteSensor1 = new DigitalInput(Ports.toteSensor1);
+    public static final DigitalInput toteSensor2 = new DigitalInput(Ports.toteSensor2);
 //	public static final DigitalInput leftLimit = new DigitalInput(Ports.leftCylinderLimit);
 //	public static final DigitalInput rightLimit = new DigitalInput(Ports.rightCylinderLimit);
 	
