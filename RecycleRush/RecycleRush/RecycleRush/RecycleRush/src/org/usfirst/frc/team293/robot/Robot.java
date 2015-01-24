@@ -1,11 +1,13 @@
 
 package org.usfirst.frc.team293.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team293.robot.OI;
 import org.usfirst.frc.team293.robot.Sensor;
-import autonomous.Auto;
-import autonomous.ChooserAuto;
+
+import autonomous.*;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -16,47 +18,61 @@ import autonomous.ChooserAuto;
  */
 public class Robot extends IterativeRobot {
 
-    /**
-     * This function is run when the robot is first started up and should be
-     * used for any initialization code.
-     */
-	private static Auto auto;
-    public void robotInit() {
-    	ChooserAuto.init();
-    }
+	/**
+	 * This function is run when the robot is first started up and should be
+	 * used for any initialization code.
+	 */
+    SendableChooser autonomousChooser = new SendableChooser();
+    String[] autonomiNames;
+    Auto[] autonomi;
+    Auto selectedAuto;
+ 
+	public void robotInit() {
+		autonomousChooser.addObject("bin set", new BinSet());
+		autonomousChooser.addObject("bin & tote set", new BinToteSet());
+		autonomousChooser.addObject("bin set & tote stack", new BinToteStack());
+		autonomousChooser.addObject("robo set", new RobotSet());
+		autonomousChooser.addObject("tote set", new ToteSet());
+		autonomousChooser.addObject("tote stack", new ToteStack());
+		
+		SmartDashboard.putData("Which Autonomous?", autonomousChooser);
+	}
 
-    /**
-     * This function is called periodically during autonomous
-     */
-    public void autonomousInit(){
-    	
-        Auto.hasRunAuto=false;
-        Auto auto = ChooserAuto.autoChosen();
-    }
-   
-    public void autonomousPeriodic() {
-    	auto.execute();
+	/**
+	 * This function is called periodically during autonomous
+	 */
+	public void autonomousInit(){
+        selectedAuto = (Auto) autonomousChooser.getSelected();
+        selectedAuto.init();
+        
+	}
 
-    }
+	public void autonomousPeriodic() {
+		if (Auto.autoTimer.get() < 15) {
+			SmartDashboard.putNumber("time", Auto.autoTimer.get());
+			selectedAuto.run();
+		}
 
-    /**
-     * This function is called periodically during operator control
-     */
-    public void teleopPeriodic() {
-        OI.controlDrive();
-        OI.controlCanLifter();
-        OI.controlToteLifter();
-        Sensor.monitor();
-    }
-    
-    /**
-     * This function is called periodically during test mode
-     */
-    public void testPeriodic() {
-        OI.controlDrive();
-        OI.controlCanLifter();
-        OI.controlToteLifter();
-        Sensor.monitor();
-    }
-    
+	}
+
+	/**
+	 * This function is called periodically during operator control
+	 */
+	public void teleopPeriodic() {
+		OI.controlDrive();
+		OI.controlCanLifter();
+		OI.controlToteLifter();
+		Sensor.monitor();
+	}
+
+	/**
+	 * This function is called periodically during test mode
+	 */
+	public void testPeriodic() {
+		OI.controlDrive();
+		OI.controlCanLifter();
+		OI.controlToteLifter();
+		Sensor.monitor();
+	}
+
 }
