@@ -33,6 +33,7 @@ public class Robot extends IterativeRobot {
         OI.controlCanLifter();
         OI.controlToteLifter();
         OI.controlDoors();
+        OI.manualControlMultitool();
         //PDP.monitor();
     }
     

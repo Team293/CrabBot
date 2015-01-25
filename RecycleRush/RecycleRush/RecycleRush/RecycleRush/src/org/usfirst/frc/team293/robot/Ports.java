@@ -26,6 +26,7 @@ public class Ports {
 			rightDrive2 = 2,
 			rightDrive1 = 4,
 			belt = 6,
+			multitool=7,
 			
 			//pneumatics
 			solenoid1 = 0,
