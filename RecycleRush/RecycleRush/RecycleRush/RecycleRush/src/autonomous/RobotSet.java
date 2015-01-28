@@ -1,6 +1,5 @@
 package autonomous;
 
-import edu.wpi.first.wpilibj.Talon;
 import subsystems.*;
 
 public class RobotSet extends Auto {
