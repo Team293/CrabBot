@@ -42,4 +42,7 @@ public class OI {
     public static void manualControlMultitool(){
     	Multitool.ControlMultitool(multiToolUpButton,multiToolStopButton,multiToolDownButton);
     }
+    public static void controlPDP() {
+    	PDP.monitor();
+    }
 }

@@ -13,15 +13,13 @@ public class Multitool {
 	
 	 public static void ControlMultitool(SpikeButton multitoolupbutton, SpikeButton multitoolstopbutton, SpikeButton multitooldownbutton){
 		{
-			double speed = 0;
+			double speed = .2;
 			 if (multitoolupbutton.get()) {
-				 speed=.2;
-				 multitoolTalon.set(.2);
+				 multitoolTalon.set(speed);
 		    	} else if (multitooldownbutton.get()) {
-		    		speed=-.2;
-		    		multitoolTalon.set(-.2);
+		    		speed=-speed;
+		    		multitoolTalon.set(speed);
 		    	}
-		    	
 		    		multitoolTalon.set(speed);
 		    	
 			

@@ -1,7 +1,11 @@
-
 package org.usfirst.frc.team293.robot;
 import edu.wpi.first.wpilibj.IterativeRobot;
-//import org.usfirst.frc.team293.robot.OI;
+
+import org.usfirst.frc.team293.robot.OI;
+
+import autonomous.*;
+import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 
 /**
@@ -16,13 +20,37 @@ public class Robot extends IterativeRobot {
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
+	
+	SendableChooser autonomousChooser = new SendableChooser();
+	String[] autonomiNames;
+	Auto[] autonomi;
+	Auto selectedAuto;
+	
     public void robotInit() {
+    	autonomousChooser.addObject("bin set", new BinSet());
+    	autonomousChooser.addObject("bin & tote set", new BinToteSet());
+    	autonomousChooser.addObject("bin set & tote stack", new BinToteStack());
+    	autonomousChooser.addObject("robot set", new RobotSet());
+    	autonomousChooser.addObject("tote set", new ToteSet());
+    	autonomousChooser.addObject("tote stack", new ToteStack());
+    	
+    	SmartDashboard.putData("Which Autonomous?", autonomousChooser);
+    	
+    }
+    
+    public void autonomousInit() {
+    	selectedAuto = (Auto) autonomousChooser.getSelected();
+    	selectedAuto.init();
     }
 
     /**
      * This function is called periodically during autonomous
      */
     public void autonomousPeriodic() {
+    	if (Auto.autoTimer.get() < 15) {
+    		SmartDashboard.putNumber("time", Auto.autoTimer.get());
+    		selectedAuto.run();
+    	}
     }
 
     /**
@@ -34,7 +62,7 @@ public class Robot extends IterativeRobot {
         OI.controlToteLifter();
         OI.controlDoors();
         OI.manualControlMultitool();
-        //PDP.monitor();
+        OI.controlPDP();
     }
     
     /**
