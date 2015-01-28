@@ -14,9 +14,9 @@ public class OI {
 	private static final SpikeButton doorButton = new SpikeButton(gamepad, Ports.B);
 	private static final SpikeButton canUpButton = new SpikeButton(gamepad, Ports.rightBumper);
 	private static final SpikeButton canDownButton = new SpikeButton(gamepad, Ports.leftBumper);
-	private static final SpikeButton multiToolUpButton= new SpikeButton(gamepad,Ports.A);
-	private static final SpikeButton multiToolDownButton= new SpikeButton(gamepad,Ports.B);
-	private static final SpikeButton multiToolStopButton= new SpikeButton(gamepad,Ports.X);
+	private static final SpikeButton multiToolUpButton= new SpikeButton(gamepad,Ports.Y);
+	private static final SpikeButton multiToolDownButton= new SpikeButton(gamepad,Ports.A);
+	private static final SpikeButton multiToolStopButton= new SpikeButton(gamepad,Ports.B);
 	public static void controlDrive() {
         DriveTrain.adjustedDrive(leftJoystick.getY(), rightJoystick.getY());
     }
